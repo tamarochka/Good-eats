@@ -1,0 +1,22 @@
+<p>Name: <%= @restaurant.name %></p>
+<p>Address: <%= @restaurant.address %></p>
+<p>City: <%= @restaurant.city %></p>
+<p>State: <%= @restaurant.state %></p>
+<p>Zip_code: <%= @restaurant.zip_code %></p>
+<p>Description: <%= @restaurant.description %></p>
+<p>Category: <%= @restaurant.category %></p>
+
+<p><%= link_to "Edit", edit_restaurant_path(@restaurant) %></p>
+
+<div>
+<h3>Reviews:</h3>
+  <div>
+  <% @restaurant.reviews.each do |review|%>
+    <tr>Rating: <%= review.rating %></tr>
+    <p>Review: <%= review.body %></p>
+</div>
+  <% end %>
+</p>
+</div>
+<h7>New Review </h7>
+<%= render 'reviews/form_review' %>

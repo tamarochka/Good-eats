@@ -1,0 +1,14 @@
+<div>
+<%= form_for @review,url: restaurant_reviews_path(@restaurant) do |f| %>
+  <td>
+    <%= f.label :rating %><br />
+    <%= f.select :rating, options_for_select(%w[1 2 3 4]) %>
+  </td>
+  <td>
+    <%= f.label :body %><br />
+    <%= f.text_area :body%>
+  </td>
+
+  <td><%= f.submit "Review this restaurant" %></td>
+<% end %>
+</div>

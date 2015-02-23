@@ -1,0 +1,9 @@
+<title>Restaurants</title>
+  <% @restaurants.each do |restaurant|%>
+  <p>
+  <tr>
+    <td><%= restaurant.name %></td>
+    <td><%= link_to "Details", restaurant %></td>
+  </tr>
+  <p>
+  <% end %>

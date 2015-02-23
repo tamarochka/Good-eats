@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+<body>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+
+       <ul class="button-group">
+         <li><a href="/restaurants" class="button">All restaurants</a></li>
+         <li><a href="/restaurants/new" class="button">New Restaurant</a></li>
+        </ul>
+      </div>
+      <h1>Good-eats</h1>
+      <hr/>
+    </div>
+  </div>
+
+
+
+
+
+
+ <div class="row">
+    <div class="large-12 columns">
+      <div><h5><%= notice %></h5></div>
+      <div class="panel">
+        <h5><%= yield %></h5>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+
+
+        <div class="large-6 columns">
+          System Check / Launch Academy
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

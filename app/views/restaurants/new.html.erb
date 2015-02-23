@@ -1,0 +1,9 @@
+<div data-alert >
+    <% @restaurant.errors.full_messages.each do |error| %>
+      <%= error %>
+      <a href="#" class="close">&times;</a>
+    <% end %>
+
+</div>
+
+<%= render "form" %>
